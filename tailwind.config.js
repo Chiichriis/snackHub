@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        logo: 'Chela One',
+        primary: 'Noto Sans',
+      }
+    },
   },
   plugins: [],
 }
