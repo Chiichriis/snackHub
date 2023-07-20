@@ -8,6 +8,7 @@ import homeIcon from './components/imgs/home.png'
 import notifyIcon from './components/imgs/notification-icon.png'
 import searchIcon from './components/imgs/search-icon.png'
 import profileIcon from './components/imgs/profile.jpg'
+import './components/Style.css'
 
 
 const App = () => {
@@ -20,24 +21,28 @@ const App = () => {
           <p className='font-logo text-xl text-slate-600'>SnackHub.</p>
         </div>
 
+        <div className='flex items-center gap-5'>
         <nav 
-          className='flex gap-5 rounded-3xl border px-3 py-4 items-center '>
+          className='flex gap-5 rounded-3xl border px-3 py-4 items-center'>
           <NavLink to="/" >
-            <img src={homeIcon} alt="home" className='h-7 w-auto hd:h-10'/>
+            <img src={homeIcon} alt="Home" className='h-7 md:h-10 w-auto'/>
           </NavLink>
-          <NavLink to="search" >
-            <img src={searchIcon} alt="search" className='h-7 md:h-10 w-auto'/>
+          <NavLink to="search">
+            <img src={searchIcon} alt="notifications" className='h-7 md:h-10 w-auto'/>
           </NavLink>
           <NavLink to="notification">
             <img src={notifyIcon} alt="notifications" className='h-7 md:h-10 w-auto'/>
           </NavLink>
-          <NavLink to="profile">
-            <img src={profileIcon} alt="profile" className='h-10 md:h-16 w-auto border rounded-full border-black ml-3 md:ml-7' />
-          </NavLink>
+          
         </nav>
+        <NavLink to="profile" className='profile'>
+            <img src={profileIcon} alt="profile" className='h-10 md:h-16 w-auto border rounded-full border-black' />
+        </NavLink> 
+        </div>
+        
       </header>
 
-      <main className='bg-red-100= h-screen flex items-center'>
+      <main className='bg-red-100= h-full flex items-center'>
         <Routes>
           <Route path='/' element ={<Home/>}/>
           <Route path='search' element ={<Search />} />
